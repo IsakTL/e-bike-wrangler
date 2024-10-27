@@ -1,6 +1,6 @@
 // Wheel class that defines the properties of a wheel
 class Wheel {
-  // Declare properties of the Wheel class using private access modifier
+  // Declare properties of the Wheel class using private access modifier.
   private diameter: number;
   private tireBrand: string;
 
@@ -20,9 +20,9 @@ class Wheel {
     return this.tireBrand;
   }
 
-  // // Setter methods for the same
+  // // Unused setter method for diameter
   // set setDiameter(d: number): void {
-  //   this.diameter
+  //   this.diameter = d;
   // }
 
 }
