@@ -8,12 +8,12 @@ import Wheel from "./Wheel.js";
 // define the Cli class
 class Cli {
   // TODO: update the vehicles property to accept Truck objects
-  vehicles: (Car | Motorbike)[];
+  vehicles: (Car | Truck | Motorbike)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
   // TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car | Motorbike)[]) {
+  constructor(vehicles: (Car | Truck | Motorbike)[]) {
     this.vehicles = vehicles;
   }
 
@@ -59,7 +59,7 @@ class Cli {
           name: 'vehicleType',
           message: 'Select a vehicle type',
           // TODO: Update the choices array to include Truck
-          choices: ['Car', 'Motorbike'],
+          choices: ['Car', 'Truck', 'Motorbike'],
         },
       ])
       .then((answers) => {
@@ -67,6 +67,9 @@ class Cli {
           case 'Car':
             this.createCar();
             break;
+          // case 'Truck':
+          //   this.createTruck();
+          //   break;
           case 'Motorbike':
             this.createMotorbike();
             break;
