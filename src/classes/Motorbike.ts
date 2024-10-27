@@ -38,7 +38,7 @@ class Motorbike extends Vehicle {
     }
   }
 
-  wheelie(){
+  wheelie(): void {
     console.log(`Motorbike ${this.make} ${this.model} does a wheelie!`)
   }
 
