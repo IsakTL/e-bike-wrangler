@@ -19,6 +19,12 @@ class Wheel {
   get getTireBrand(): string {
     return this.tireBrand;
   }
+
+  // // Setter methods for the same
+  // set setDiameter(d: number): void {
+  //   this.diameter
+  // }
+
 }
 
 // Export the Wheel class
