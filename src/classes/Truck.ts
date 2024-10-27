@@ -27,8 +27,7 @@ class Truck extends Vehicle implements AbleToTow {
     topSpeed: number,
     wheels: Wheel[],
     towingCapacity: number
-  )
-  {
+  ) {
     // Call the constructor of the parent class, Vehicle
     super();
 
@@ -53,10 +52,19 @@ class Truck extends Vehicle implements AbleToTow {
 
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
-    // TODO: Get the make an model of the vehicle if it exists
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    // TODO: If it is, log that the vehicle is being towed
-    // TODO: If it is not, log that the vehicle is too heavy to be towed
+    const make = vehicle.make,
+      model = vehicle.model,
+      weight = vehicle.weight,
+      tC = this.towingCapacity;
+    if (tC >= weight) {
+      console.log(`The ${make} ${model} is now being towed.`);
+    }
+    else if (tC < weight) {
+      console.log('Too heavy!');
+    }
+    else {
+      console.log('Too many bugs in this one');
+    }
   }
 
   override printDetails(): void {
@@ -69,7 +77,7 @@ class Truck extends Vehicle implements AbleToTow {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    console.log(`Towing Capacity: ${this.towingCapacity} other vehicles`);
+    console.log(`Towing Capacity: ${this.towingCapacity} lbs`);
 
     // Print details of the wheels
     console.log(
