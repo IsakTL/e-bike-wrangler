@@ -8,6 +8,7 @@ This program can be run from the command line with "npm start" once its dependen
 
 ## Usage
 Input as prompted via keyboard.
+How-to video at this link: (https://youtu.be/lClcluagrHo)[https://youtu.be/lClcluagrHo]
 
 ## Contributing
 If, for whatever reason, you'd like to change something about this project, please contact me at my email below or fork the project on GitHub.
